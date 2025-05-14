@@ -36,6 +36,7 @@ All this is handled cleanly using Polly policies and modern .NET 8 best practice
 1. Add Polly NuGet packages:
 ```bash
 dotnet add package Microsoft.Extensions.Http.Polly
+```
 
 2. Register named HttpClient with policies in Program.cs:
 ```csharp
@@ -46,6 +47,7 @@ builder.Services.AddHttpClient("ExternalAPI", client =>
 .AddTransientHttpErrorPolicy(policy => 
     policy.WaitAndRetryAsync(3, retry => TimeSpan.FromMilliseconds(200)))
 .AddCircuitBreakerPolicy();
+```
 
 3. Inject IHttpClientFactory into your controller:
 ```csharp
@@ -62,6 +64,7 @@ public class TestController : ControllerBase
     public async Task<IActionResult> Get() =>
         Ok(await _client.GetStringAsync("/ping"));
 }
+```
 
 ---
 
@@ -71,14 +74,17 @@ public class TestController : ControllerBase
 ```bash
 git clone https://github.com/yourusername/PollyHttpClientDemo_Dockerized.git
 cd PollyHttpClientDemo_Dockerized
+```
 
 2. Build and run the project:
 ```bash
 docker-compose up --build
+```
 
 3. Test the endpoint:
 ```bash
 curl http://localhost:8080/test
+```
 
 You’ll see the HttpClient call handled via Polly, including retry logic or circuit breaker behavior if the mock API is unstable.
 
@@ -97,6 +103,7 @@ PollyHttpClientDemo/
 │
 ├── docker-compose.yml
 └── README.md
+```
 
 ---
 
