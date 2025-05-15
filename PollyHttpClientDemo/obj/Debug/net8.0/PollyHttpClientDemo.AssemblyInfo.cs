@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PollyHttpClientDemo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73b2870fde6b40fa2bc9fdca8b55be9be93f0047")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e60f5c79c8672634b5933fbbf8df34c4a71fc1cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("PollyHttpClientDemo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PollyHttpClientDemo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
